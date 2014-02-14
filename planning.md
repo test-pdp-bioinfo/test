@@ -3,8 +3,8 @@
 - [ ] Scope statement
 
 ## March 3rd - March 9th
-- [ ] (Quentin, Aurélien) Basic WebGL display 
-- [ ] (Mathieu, Rania) Basic documentation - GitHub Wiki
+- [ ] Quentin, Aurélien - Basic WebGL display 
+- [ ] Mathieu, Rania - Basic documentation - GitHub Wiki
 
 ## March 10th - March 16th
 
@@ -12,15 +12,15 @@
 - [ ] Pre-presentation of the project
 
 ## March 17th - March 23rd
-- [ ] (Mathieu, Rania) Basic sequence input
+- [ ] Mathieu, Rania - Basic sequence input
 
 ## March 24th - March 30th
 - [ ] First prototype
 
 ## March 31st - April 6th
 - [ ] Analyse trial results
-- [ ] (Quentin, Rania) Add other matrix
-- [ ] (Mathieu, Aurélien) Histogram
+- [ ] Quentin, Rania - Add other matrix
+- [ ] Mathieu, Aurélien - Histogram
 
 ## April 7th - April 13th
 
@@ -42,5 +42,5 @@
 ## May 12th - May 16th
 - [ ] Prepare presentation
 
-## May 15th (16th?)
+## May 15th - 16th?
 - [ ] Presentation
