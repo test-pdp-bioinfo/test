@@ -3,7 +3,7 @@
 - [ ] Scope statement
 
 ## March 3rd - March 9th
-- [ ] Quentin, Aurélien - Basic WebGL display 
+- [ ] Quentin, Aurélien - Basic WebGL display, gene window
 - [ ] Mathieu, Rania - Basic documentation - GitHub Wiki
 
 ## March 10th - March 16th
@@ -12,6 +12,7 @@
 - [ ] Pre-presentation of the project
 
 ## March 17th - March 23rd
+- [ ] Quentin, Aurélien - LocalStorage for genes and matrix
 - [ ] Mathieu, Rania - Basic sequence input
 
 ## March 24th - March 30th
@@ -20,7 +21,7 @@
 ## March 31st - April 6th
 - [ ] Analyse trial results
 - [ ] Quentin, Rania - Add other matrix
-- [ ] Mathieu, Aurélien - Histogram
+- [ ] Mathieu, Aurélien - Histogram, further WebGL dev
 
 ## April 7th - April 13th
 
