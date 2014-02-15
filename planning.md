@@ -12,7 +12,7 @@
 - [ ] Pre-presentation of the project
 
 ## March 17th - March 23rd
-- [ ] Quentin, Aurélien - LocalStorage for genes and matrix
+- [ ] Quentin, Aurélien - Basic histogram
 - [ ] Mathieu, Rania - Basic sequence input
 
 ## March 24th - March 30th
