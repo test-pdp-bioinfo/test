@@ -17,7 +17,7 @@
 \chapter*{Introduction}
 
 Le Dotlet est une application permettant de comparer deux séquences nucléotidiques ou protéiques en se basant sur la théorie du dot-plot. Cependant, pour pouvoir utiliser l'applet, il faut télécharger une extension java.\\
-L'objectif du projet, est d'implémenter une interface web ne nécessitant aucune extension sur tout navigateur et produisant le même type de résultat.
+L'objectif du projet, est d'implémenter une interface web ne nécessitant aucune extension sur tout navigateur et produisant le même type de résultat.\\
 
 
 \chapter{Dot-plot}
@@ -25,22 +25,16 @@ L'objectif du projet, est d'implémenter une interface web ne nécessitant aucun
 \section{Définition}
 
 Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidique ou protéique). En effet, pour connaitre la présence de séquences palindromiques ou de similitude entre deux séquences différentes ou identiques, l'utilisation du dot plot est un bon moyen. C'est une technique ancienne (preciser date) mais elle demeure efficace pour les comparaisons globales.
-La comparaison ne peut être effectuée qu'entre séquences de même nature. 
-Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est possible d'en déduire des similitudes ou non par exemple. 
+La comparaison ne peut être effectuée qu'entre séquences de même nature. \\
+Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est possible d'en déduire des similitudes ou non par exemple. \\
 
 \section{Calculs des comparaisons et graphique}
 
-Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides:  La première base de la première séquence est comparée avec la première base de la seconde séquence. 
-Le choix d'une méthode d'alignement de séquence est ensuite choisie. Son choix est important. En effet, suivant leur niveau de similitude, un score leur est attribué et ce dernier n'est le même suivant la méthode choisie. (ne pas oublier de le détailler... plus tard...)
+Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides:  La première base de la première séquence est comparée avec la première base de la seconde séquence. \\
+Le choix d'une méthode d'alignement de séquence est ensuite choisie. Son choix est important. En effet, suivant leur niveau de similitude, un score leur est attribué et ce dernier n'est le même suivant la méthode choisie. (ne pas oublier de le détailler... plus tard...)\\
 Pour représenter ces scores de manière ergonomique, à chaque score lui est associé une couleur. De ce fait, il est plus facile d'observer certains types de diagonales et donc de déduire la présence de similitudes ou de palindromes.
 
 %mettre images des differentes intrepretations d'un dot plot.
-
-\begin{figure}[!h]
-\centering
-\includegraphics{/Users/muse_om92/Documents/figure1.png}
-Figure1: Représentation des différents résultats recherchés
-\end{figure}
 
 
 \chapter{Dotlet}
@@ -48,13 +42,40 @@ Figure1: Représentation des différents résultats recherchés
 \section{Historique}
 
 Le dotlet est une application web permettant d'utiliser la technique du dot plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de méthodes. 
-Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Epalinges en Suisse. Jusqu'à présent, il n'y avait d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.
-L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis l'application.
+Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Epalinges en Suisse. Jusqu'à présent, il n'y avait d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
+L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis l'application.\\
 
 
 \section{Utilisation}
 
-L'interface graphique est composée de "boutons" (à modifier si possible) où sont saisis les deux séquences à comparer. La saisie des séquence s'effectue via le copier-coller. Un autre permettant de choisir la matrice d'alignement parmi les suivantes: Identité (par défaut), blosum, pac (ect je ne m'en souviens plus). Notamment, deux boutons permettant le choix de la taille de la fenêtre de comparaison ainsi que le zoom. 
+L'interface graphique permet la saisie des deux séquences à comparer. Elle s'effectue via le copier-coller. Il est notamment possible de choisir la matrice d'alignement parmi les suivantes: Identité (par défaut), blosum, pac (ect je ne m'en souviens plus). Il est notamment possible de choisir la taille de la fenêtre de comparaison ainsi que le zoom. \\
+Les comparaisons peuvent se faire entre deux séquences ADN, deux protéines ou entre une séquence d'ADN et une séquence protéique. Dans ce dernier cas, l'ADN est directement traduit en séquence protéique par le biais du cadre de lecture le plus optimal des trois cadres.\\
+
+%publier les images du dotlet
+\begin{figure}[!h]
+\centering
+\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image3.png}
+Figure1: 
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image4.png}
+Figure2:
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image5.png}
+Figure3:
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image1.png}
+Figure4:
+\end{figure}
+
+La souris a aussi son importance. En effet, en cliquant sur le graphique, s'affiche l'alignement en dessous et à droite du graphe l'histogramme (je vous laisse l'expliquer^^).\\
+L'histogramme blablablabla...
+
 
 \chapter{Conception du projet}
 
