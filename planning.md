@@ -16,6 +16,7 @@
 - [ ] Mathieu, Rania - Basic sequence input
 
 ## March 24th - March 30th
+- [ ] Basic website
 - [ ] First prototype
 
 ## March 31st - April 6th
@@ -24,18 +25,21 @@
 - [ ] Mathieu, Aurélien - Histogram, further WebGL dev
 
 ## April 7th - April 13th
+- [ ] Algo ADN-ADN et PROT-ADN
 
 ## April 14th - April 20th
+- [ ]Amelioration du design
 
 ## April 21st - April 27th
 
 ## April 28th - May 4th
 
 ## May 1st
-- [ ] Code finalized
+- [ ] Code finalisé
 
 ## May 5th - May 11th
-- [ ] Finalize documentation
+- [ ] Documentation finalisée
+- [ ] Debug
 
 ## May 11th
 - [ ] Report

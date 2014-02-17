@@ -17,21 +17,21 @@
 \chapter*{Introduction}
 
 Le Dotlet est une application permettant de comparer deux séquences nucléotidiques ou protéiques en se basant sur la théorie du dot-plot. Cependant, pour pouvoir utiliser l'applet, il faut télécharger une extension java.\\
-L'objectif du projet, est d'implémenter une interface web ne nécessitant aucune extension sur tout navigateur et produisant le même type de résultat.\\
+L'objectif du projet est d'implémenter une interface web ne nécessitant aucune extension sur tout navigateur et produisant le même type de résultat.\\
 
 
 \chapter{Dot-plot}
 
 \section{Définition}
 
-Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidique ou protéique). En effet, pour connaitre la présence de séquences palindromiques ou de similitude entre deux séquences différentes ou identiques, l'utilisation du dot plot est un bon moyen. C'est une technique ancienne (preciser date) mais elle demeure efficace pour les comparaisons globales.
+Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidiques ou protéiques). En effet, pour connaître la présence de séquences palindromiques ou de similitudes entre deux séquences différentes ou identiques, l'utilisation du dot-plot est un bon moyen. C'est une technique ancienne (preciser date) mais elle demeure efficace pour les comparaisons globales.
 La comparaison ne peut être effectuée qu'entre séquences de même nature. \\
 Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est possible d'en déduire des similitudes ou non par exemple. \\
 
 \section{Calculs des comparaisons et graphique}
 
-Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides:  La première base de la première séquence est comparée avec la première base de la seconde séquence. \\
-Le choix d'une méthode d'alignement de séquence est ensuite choisie. Son choix est important. En effet, suivant leur niveau de similitude, un score leur est attribué et ce dernier n'est le même suivant la méthode choisie. (ne pas oublier de le détailler... plus tard...)\\
+Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides : La première base de la première séquence est comparée avec la première base de la seconde séquence. \\
+Le choix d'une méthode d'alignement de séquence est ensuite choisie. Son choix est important. En effet, suivant leur niveau de similitude, un score leur est attribué et ce dernier n'est pas le même suivant la méthode choisie. (ne pas oublier de le détailler... plus tard...)\\
 Pour représenter ces scores de manière ergonomique, à chaque score lui est associé une couleur. De ce fait, il est plus facile d'observer certains types de diagonales et donc de déduire la présence de similitudes ou de palindromes.
 
 %mettre images des differentes intrepretations d'un dot plot.
@@ -41,15 +41,47 @@ Pour représenter ces scores de manière ergonomique, à chaque score lui est as
 
 \section{Historique}
 
-Le dotlet est une application web permettant d'utiliser la technique du dot plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de méthodes. 
-Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Epalinges en Suisse. Jusqu'à présent, il n'y avait d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
-L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis l'application.\\
+Le dotlet est une application web permettant d'utiliser la technique du dot-plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de matrices. 
+Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Epalinges en Suisse. Jusqu'à présent, il n'y avait pas d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
+L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis le site.\\
 
 
 \section{Utilisation}
 
-L'interface graphique permet la saisie des deux séquences à comparer. Elle s'effectue via le copier-coller. Il est notamment possible de choisir la matrice d'alignement parmi les suivantes: Identité (par défaut), blosum, pac (ect je ne m'en souviens plus). Il est notamment possible de choisir la taille de la fenêtre de comparaison ainsi que le zoom. \\
-Les comparaisons peuvent se faire entre deux séquences ADN, deux protéines ou entre une séquence d'ADN et une séquence protéique. Dans ce dernier cas, l'ADN est directement traduit en séquence protéique par le biais du cadre de lecture le plus optimal des trois cadres.\\
+L'interface graphique permet la saisie des deux séquences à comparer. Elle s'effectue via le copier-coller. Il est notamment possible de choisir la matrice d'alignement parmi les suivantes : Identité (par défaut), blosum, pac (etc je ne m'en souviens plus). Il est notamment possible de choisir la taille de la fenêtre de comparaison ainsi que le zoom. \\
+Les comparaisons peuvent se faire entre deux séquences ADN, deux protéines ou entre une séquence d'ADN et une séquence protéique. Dans ce dernier cas, l'ADN est traduit en séquences protéiques par le biais des différents cadres de lecture possibles.\\
+
+\chapter{Exigences}
+\section{Besoins fonctionnels}
+Mathieu
+version 1 : interface, liste matrice, gestion constraste/luminosité, etc : fonctionnalités demandés par le prof.
+
+\section{Besoins non fonctionnels}
+Quentin
+Bonus
+version 1.5 : ajout zarbi, amélioration interface (zoom), gestion traduction, design
+
+\section{Test du programme}
+
+30 mars, L3 ?
+Jeu de données
+
+\chapter{Environnement de Programation}
+HTML
+CSS
+webGL
+
+Rania
+
+\chapter{Architecture}
+Utilisation des langages
+Maquette ?
+
+Aurélien
+
+
+\chapter{Planning previsionnel}
+almost done
 
 %publier les images du dotlet
 \begin{figure}[!h]
