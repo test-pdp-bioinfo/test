@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 
 \title{Cahier des charges: \\Projet Développement d'un dot-plot en html, javascript et webgl }
-\author{Rania \bsc{Assab} \\ Aurélien \bsc{Luciani}\\ Quentin \bsc{Riché-Piotaix}\\ Mathieu \bsc{Shaeffer}}
+\author{Rania \bsc{Assab} \\ Aurélien \bsc{Luciani}\\ Quentin \bsc{Riché-Piotaix}\\ Mathieu \bsc{Schaeffer}}
 \date{5 mars 2014}
 \begin{document}
 
@@ -24,9 +24,9 @@ L'objectif du projet est d'implémenter une interface web ne nécessitant aucune
 
 \section{Définition}
 
-Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidiques ou protéiques). En effet, pour connaître la présence de séquences palindromiques ou de similitudes entre deux séquences différentes ou identiques, l'utilisation du dot-plot est un bon moyen. C'est une technique ancienne (preciser date) mais elle demeure efficace pour les comparaisons globales.
-La comparaison ne peut être effectuée qu'entre séquences de même nature. \\
-Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est possible d'en déduire des similitudes ou non par exemple. \\
+Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidiques ou protéiques). En effet, pour connaître la présence de séquences palindromiques ou de similitudes entre deux séquences différentes ou identiques, l'utilisation du dot-plot est un bon moyen. C'est une technique remontant aux années 70 mais elle demeure efficace pour avoir une vue 	générale.
+La comparaison ne peut être effectuée qu'entre séquences de même nature.\\
+Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est, par exemple, possible d'en déduire plus ou moins de similitudes.\\
 
 \section{Calculs des comparaisons et graphique}
 
@@ -41,8 +41,8 @@ Pour représenter ces scores de manière ergonomique, à chaque score lui est as
 
 \section{Historique}
 
-Le dotlet est une application web permettant d'utiliser la technique du dot-plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de matrices. 
-Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Epalinges en Suisse. Jusqu'à présent, il n'y avait pas d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
+Le Dotlet est une application web permettant d'utiliser la technique du dot-plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de matrices. 
+Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Épalinges en Suisse. Jusqu'à présent, il n'y avait pas d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
 L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis le site.\\
 
 
@@ -74,13 +74,54 @@ Figure4:
 \end{figure}
 
 La souris a aussi son importance. En effet, en cliquant sur le graphique, s'affiche l'alignement en dessous et à droite du graphe l'histogramme (je vous laisse l'expliquer^^).\\
-L'histogramme blablablabla...
+%L'histogramme blablablabla...
 
 
 \chapter{Exigences}
 \section{Besoins fonctionnels}
-Mathieu
-version 1 : interface, liste matrice, gestion constraste/luminosité, etc : fonctionnalités demandés par le prof.
+Selon les exigences données, nous allons devoir nous conformer au Dotlet précédemment décris.\\
+Cet outil ayant été validé et utilisé pendant 10 ans par de nombreux scientifiques, professeurs et étudiants, il représentera donc notre objet de référence.\\
+Notre objectif étant d'en réaliser une version web améliorée plus accessible, usant des langages HTML, WebGL et JavaScript. Ceux-ci ayant évolués, il est maintenant possible de le faire, sans JAVA, et de ne plus s'astreindre de problèmes de plugins.\\
+
+Les principales exigences de ce projet se résument en 3 parties : Affichage, Fenêtre et Alignement.
+
+\paragraph{web}
+
+Cet outil de dot-plot devra être disponible directement sur le web, cependant il nous faudra adapter notre code aux différents navigateurs. En effet, certaines nouvelles fonctionnalités des langages HTML5 et CSS3 ne sont pas encore compatibles avec chacun d'entre eux.
+Pour l'instant, seuls les navigateurs Chrome et Firefox ont été demandé comme opérationnels.
+
+\paragraph{Le menu}
+	
+Tout d'abord, il va falloir réaliser un menu permettant d'initialiser les différents paramètres de ce dotplot, incluant :
+\begin{itemize}
+	\item L'enregistrement de séquences a comparer, via un entrée de texte.
+	\item le choix des 2 séquences dans une liste déroulante, parmi les séquences enregistrées.
+	\item le choix de la matrice de comparaison parmi ceux récupérés de la littérature.
+	\item La taille de la fenêtre de comparaison pour plus ou moins de précision dans notre dot-plot.
+\end{itemize}
+
+\paragraph{La fenêtre}
+	L'affichage des résultats va nécessiter une fenêtre de dot-plot traduisant les scores obtenus entre les 2 séquences, en abscisse et ordonnée, sur une image par des niveaux de gris  permettant d'apprécier par une vision plus globale les affinités entre ces séquences.\\
+Chaque pixel de l'image représentera donc un score entre les 2 bases selon la matrice et la taille de la fenêtre de comparaison passées en paramètre.
+
+
+
+\paragraph{L'alignement}
+	Une vision plus précise sera donnée par l'affichage de l'alignement des 2 séquences.\\
+Des ascenseurs permettront de naviguer sur celles-ci et de choisir une position pour chacune d'entre elle.\\
+La fenêtre de comparaison préalablement choisie ainsi qu'un score plus ou moins élevé entre 2 paires de bases via un jeu de couleur devront y figurer.\\
+D'autre part, la comparaison entre l'une des deux séquences et l'inverse de la seconde  sera également intégré.
+Dans le cas où on étudierait le rapprochement entre une séquence d'ADN et une protéine, l'alignement comprendra la séquence protéique initiale, ainsi que les 3 séquences protéiques traduites des 3 cadres de lectures de la séquence nucléotidique et leur reverse.
+
+
+
+De plus, la souris devra servir d'intermédiaire avec le graphique de dot-plot. En effet, un clic sur l'image enregistrera les positions des séquences à cet endroit et l'alignement s'initialisera à partir de celles ci.
+
+
+\paragraph{L'histogramme}
+
+Enfin, un histogramme sera ajouté, mettant en évidence les pointes de gris correspondant aux scores affichés sur l'image.\\
+Des ascenseurs permettront de faire fluctuer le contraste et de se focaliser uniquement sur certaines valeurs. Ces modifications  se répercuteront sur l'image, permettant de révéler des diagonales intéressantes, de pouvoir les sélectionner par un clic et de les afficher dans l'alignement.
 
 \section{Besoins non fonctionnels}
 Quentin
