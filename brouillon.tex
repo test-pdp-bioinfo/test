@@ -16,116 +16,100 @@
 
 \chapter*{Introduction}
 
-Le Dotlet est une application permettant de comparer deux séquences nucléotidiques ou protéiques en se basant sur la théorie du dot-plot. Cependant, pour pouvoir utiliser l'applet, il faut télécharger une extension java.\\
-L'objectif du projet est d'implémenter une interface web ne nécessitant aucune extension sur tout navigateur et produisant le même type de résultat.\\
-
+Le Dotlet est une application disponible en ligne permettant de comparer deux séquences nucléotidiques ou protéiques en se basant sur la théorie du dot-plot. Cependant, pour pouvoir l'utiliser, il faut que la machine virtuelle Java soit installée sur la machine et disponible dans le navigateur.\\
+L'objectif du projet est d'implémenter une interface web en utilisant les technologies standards actuelles, en ne nécessitant aucune extension navigateur et produisant le même type de résultat.\\
+Ce logiciel a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Épalinges en Suisse. Jusqu'à présent, il n'y avait pas d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de la faire et ont même continué son développement. En effet, la version 1.5 est sortie récemment avec plus de fonctionnalités.\\
 
 \chapter{Dot-plot}
 
 \section{Définition}
 
-Le dot-plot est un très puissant outil de comparaison de séquences (nucléotidiques ou protéiques). En effet, pour connaître la présence de séquences palindromiques ou de similitudes entre deux séquences différentes ou identiques, l'utilisation du dot-plot est un bon moyen. C'est une technique remontant aux années 70 mais elle demeure efficace pour avoir une vue 	générale.
-La comparaison ne peut être effectuée qu'entre séquences de même nature.\\
-Les éléments sont comparés deux à deux (un par séquence). Les résultats de la comparaison sont illustrés par un graphique, où il est, par exemple, possible d'en déduire plus ou moins de similitudes.\\
+Le dot-plot est une des seules manières de comparer des séquences - nucléotidiques ou protéiques - pour mettre en évidence les séquences répétées ou palindromiques. C'est une technique remontant aux années 70 mais elle demeure efficace pour en avoir une vue générale.\\
+Les éléments sont comparés deux à deux et les résultats de la comparaison sont illustrés par un graphique qui permet de mettre en évidence des zones d'intérêt.\\
+De par la nature du dot-plot, la comparaison ne peut être effectuée qu'entre séquences de même type.\\
 
 \section{Calculs des comparaisons et graphique}
 
-Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides : La première base de la première séquence est comparée avec la première base de la seconde séquence. \\
-Le choix d'une méthode d'alignement de séquence est ensuite choisie. Son choix est important. En effet, suivant leur niveau de similitude, un score leur est attribué et ce dernier n'est pas le même suivant la méthode choisie. (ne pas oublier de le détailler... plus tard...)\\
-Pour représenter ces scores de manière ergonomique, à chaque score lui est associé une couleur. De ce fait, il est plus facile d'observer certains types de diagonales et donc de déduire la présence de similitudes ou de palindromes.
+Pour pouvoir interpréter les résultats, il faut comprendre comment se déroule le processus de comparaison. Par exemple, dans le cas de deux séquences de nucléotides : La première base de la première séquence est comparée avec la première base de la seconde séquence. Une matrice d'alignement de séquence doit être choisie pour l'analyse.\\
+Son choix est important car selon la matrice choisie, le résultat sera différent. Les matrices doivent être sélectionnées selon les séquences à analyser car il en existe avec des pondérations différentes donnant des scores différents.\\
+Pour représenter ceux-ci de manière ergonomique, à chaque score est associé un gradient de couleur, nous permettant de visualiser des motifs, comme des diagonales (cf fig.\ref{schema}). On peut alors en déduire la présence de similitudes ou de palindromes dans les séquences.\\
 
-%mettre images des differentes intrepretations d'un dot plot.
 
+\begin{figure}[!h]
+\centerline{\includegraphics[scale=0.35]{SchemaDotplot.png}}
+\caption{Représentation de différents résultats}
+\label{schema}
+\end{figure}
 
 \chapter{Dotlet}
-
-\section{Historique}
-
-Le Dotlet est une application web permettant d'utiliser la technique du dot-plot de manière plus ergonomique et avec la possibilité de choisir la méthode d'alignement parmi une liste de matrices. 
-Il a été codé par Marco Pagni et Thomas Junier, du Swiss Institute of Bioinformatics à Épalinges en Suisse. Jusqu'à présent, il n'y avait pas d'application permettant la comparaison de séquences à travers un navigateur web. Ils ont alors pris l'initiative de le faire.\\
-L'applet a été codé en java et nécessite une extension java pour pouvoir l'utiliser. La nouvelle version 1.5 a été mise à jour. Le code source est accessible à tout le monde depuis le site.\\
-
-
 \section{Utilisation}
 
-L'interface graphique permet la saisie des deux séquences à comparer. Elle s'effectue via le copier-coller. Il est notamment possible de choisir la matrice d'alignement parmi les suivantes : Identité (par défaut), blosum, pac (etc je ne m'en souviens plus). Il est notamment possible de choisir la taille de la fenêtre de comparaison ainsi que le zoom. \\
-Les comparaisons peuvent se faire entre deux séquences ADN, deux protéines ou entre une séquence d'ADN et une séquence protéique. Dans ce dernier cas, l'ADN est traduit en séquences protéiques par le biais des différents cadres de lecture possibles.\\
+L'interface graphique permet la saisie des deux séquences à comparer. Elle s'effectue via copier-coller. Il est nécessaire de choisir une matrice d'alignement~: Identité (par défaut), BLOSUM, PAM, etc. Il est aussi possible de choisir une taille de fenêtre de comparaison et un zoom particuliers.\\
+Les comparaisons peuvent se faire entre deux séquences d'ADN, deux protéines ou entre une séquence d'ADN et une séquence protéique. Dans ce dernier cas, l'ADN est traduit en séquence protéique par le biais des différents cadres de lecture possibles.\\
 
 %publier les images du dotlet
 \begin{figure}[!h]
 \centering
-\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image3.png}
+\includegraphics{image3.png}
 Figure1: 
 \end{figure}
 \begin{figure}[!h]
 \centering
-\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image4.png}
+\includegraphics{image4.png}
 Figure2:
 \end{figure}
 \begin{figure}[!h]
 \centering
-\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image5.png}
+\includegraphics{image5.png}
 Figure3:
 \end{figure}
 \begin{figure}[!h]
 \centering
-\includegraphics{/Users/muse_om92/Documents/Masterbioinfo/M1S2/BigProjet/image1.png}
+\includegraphics{image1.png}
 Figure4:
 \end{figure}
 
-La souris a aussi son importance. En effet, en cliquant sur le graphique, s'affiche l'alignement en dessous et à droite du graphe l'histogramme (je vous laisse l'expliquer^^).\\
-%L'histogramme blablablabla...
-
-
 \chapter{Exigences}
 \section{Besoins fonctionnels}
-Selon les exigences données, nous allons devoir nous conformer au Dotlet précédemment décris.\\
-Cet outil ayant été validé et utilisé pendant 10 ans par de nombreux scientifiques, professeurs et étudiants, il représentera donc notre objet de référence.\\
-Notre objectif étant d'en réaliser une version web améliorée plus accessible, usant des langages HTML, WebGL et JavaScript. Ceux-ci ayant évolués, il est maintenant possible de le faire, sans JAVA, et de ne plus s'astreindre de problèmes de plugins.\\
+Selon les exigences données, il va falloir se conformer au Dotlet précédemment décrit.\\
+Cet outil ayant été validé et utilisé pendant une dizaine d'années par de nombreux scientifiques, professeurs et étudiants, il représentera donc la référence.\\
+L'objectif est d'en réaliser une version web plus accessible, utilisant les technologies HTML, WebGL et JavaScript. Celles-ci ayant évolué, il est maintenant possible de le faire sans utiliser Java et de ne plus dépendre d'un module externe.\\
 
-Les principales exigences de ce projet se résument en 3 parties : Affichage, Fenêtre et Alignement.
+\paragraph{Web} ~\\
 
-\paragraph{web}
+Cet outil de dot-plot devra être disponible directement sur le web, cependant, le code devra être compatible avec les principaux navigateurs du marché.
+Dans un premier temps, seuls les navigateurs Chrome et Firefox sont demandés.
 
-Cet outil de dot-plot devra être disponible directement sur le web, cependant il nous faudra adapter notre code aux différents navigateurs. En effet, certaines nouvelles fonctionnalités des langages HTML5 et CSS3 ne sont pas encore compatibles avec chacun d'entre eux.
-Pour l'instant, seuls les navigateurs Chrome et Firefox ont été demandé comme opérationnels.
+\paragraph{Menu} ~\\
 
-\paragraph{Le menu}
-	
-Tout d'abord, il va falloir réaliser un menu permettant d'initialiser les différents paramètres de ce dotplot, incluant :
+Tout d'abord, il va falloir réaliser un menu permettant d'initialiser les différents paramètres de ce dot-plot, incluant~:
 \begin{itemize}
-	\item L'enregistrement de séquences a comparer, via un entrée de texte.
-	\item le choix des 2 séquences dans une liste déroulante, parmi les séquences enregistrées.
-	\item le choix de la matrice de comparaison parmi ceux récupérés de la littérature.
-	\item La taille de la fenêtre de comparaison pour plus ou moins de précision dans notre dot-plot.
+	\item L'enregistrement de séquences a comparer, via une entrée de texte.
+	\item Le choix des 2 séquences dans une liste déroulante, parmi les séquences enregistrées.
+	\item Le choix de la matrice de comparaison parmi celles récupérés dans la littérature.
+	\item La taille de la fenêtre de comparaison, pour plus ou moins de précision dans notre dot-plot.
 \end{itemize}
 
-\paragraph{La fenêtre}
-	L'affichage des résultats va nécessiter une fenêtre de dot-plot traduisant les scores obtenus entre les 2 séquences, en abscisse et ordonnée, sur une image par des niveaux de gris  permettant d'apprécier par une vision plus globale les affinités entre ces séquences.\\
-Chaque pixel de l'image représentera donc un score entre les 2 bases selon la matrice et la taille de la fenêtre de comparaison passées en paramètre.
+\paragraph{Graphe} ~\\
+	L'affichage des résultats se fera sur un graphe traduisant les scores obtenus entre les 2 séquences, représentées en abscisse et en ordonnée. Ceux-ci sont représentés par un gradient de couleurs.\\
+Chaque pixel de l'image représentera donc le score calculé selon la matrice et la taille de la fenêtre de comparaison passées en paramètres.
 
-
-
-\paragraph{L'alignement}
-	Une vision plus précise sera donnée par l'affichage de l'alignement des 2 séquences.\\
+\paragraph{Fenêtre d'alignement} ~\\
+	Une vision plus précise sera donnée par l'affichage d'une fenêtre d'alignement entre les 2 séquences.
 Des ascenseurs permettront de naviguer sur celles-ci et de choisir une position pour chacune d'entre elle.\\
-La fenêtre de comparaison préalablement choisie ainsi qu'un score plus ou moins élevé entre 2 paires de bases via un jeu de couleur devront y figurer.\\
-D'autre part, la comparaison entre l'une des deux séquences et l'inverse de la seconde  sera également intégré.
-Dans le cas où on étudierait le rapprochement entre une séquence d'ADN et une protéine, l'alignement comprendra la séquence protéique initiale, ainsi que les 3 séquences protéiques traduites des 3 cadres de lectures de la séquence nucléotidique et leur reverse.
+Devront y figurer la fenêtre de comparaison ainsi que le degré de similitude entre les éléments comparés.\\
+D'autre part, certains cas particuliers devront être pris en compte.
+Dans le cas où l'on étudierait le rapprochement entre une séquence d'ADN et une protéine, l'alignement comprendra la séquence protéique initiale, ainsi que les 3 séquences protéiques traduites des 3 cadres de lectures de la séquence nucléotidique.
+Pour une comparaison entre ADN, les séquences seront comparées dans le même sens et dans des sens opposés.\\
+Un clic sur l'image capturera les positions des séquences et l'alignement s'initialisera à partir de celles ci.
 
-
-
-De plus, la souris devra servir d'intermédiaire avec le graphique de dot-plot. En effet, un clic sur l'image enregistrera les positions des séquences à cet endroit et l'alignement s'initialisera à partir de celles ci.
-
-
-\paragraph{L'histogramme}
+%Partir un jour, sans retour
+\paragraph{Histogramme} ~\\
 
 Enfin, un histogramme sera ajouté, mettant en évidence les pointes de gris correspondant aux scores affichés sur l'image.\\
 Des ascenseurs permettront de faire fluctuer le contraste et de se focaliser uniquement sur certaines valeurs. Ces modifications  se répercuteront sur l'image, permettant de révéler des diagonales intéressantes, de pouvoir les sélectionner par un clic et de les afficher dans l'alignement.
 
 \section{Besoins non fonctionnels}
-Quentin
-
 
 \subsection{Fonctionnalités de la version 1.5}
 Certaines fonctionnalités qui ne sont pas essentielles au bon déroulement de l'application ont été implémentée avec la version 1.5 du logiciel. Il s'agit de l'ajout d'un bouton permettant d'imprimer directement, qui pourra être remplacé par la possibilité de récupérer l'image. Les autres ajouts permettent, en combinant une action de la souris et une touche de clavier sélectionner zones d'intérêt dans l'image. Cela peut être une diagonale contenue dans la zone sélectionné si au moins la moitié des valeurs des points de cette diagonale dépassent un certain seuil (défini par l'utilisateur). Les séquences de ces diagonales peuvent ensuite être récupérées. C'est également le cas pour une autre fonctionnalité : l'utilisateur peut, en cliquant sur un point, récupérer la séquence de la diagonale sur laquelle il a cliqué, tant que les valeurs de cette diagonale sont au dessus du seuil qu'il a défini. Cette action peut être répétées, les séquences s'ajoutent. Enfin, le dernier ajout permet de voir facilement le positionnement dans les séquences avec un simple survol de la zone d'intérêt.
