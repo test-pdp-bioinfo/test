@@ -1,40 +1,40 @@
 # Planning
 ## February 17th - March 2nd
-- [ ] Scope statement
 
 ## March 3rd - March 9th
-- [ ] Quentin, Aurélien - Basic WebGL display, gene window
-- [ ] Mathieu, Rania - moteur basique
+- [ ] Cahier des charges
 
 ## March 10th - March 16th
+- [ ] Quentin, Aurélien - affichage WebGL basique
+- [ ] Mathieu, Rania - moteur basique
 
 ## March 14th
-- [ ] Pre-presentation of the project
+- [ ] Pré-presentation of the project
 
 ## March 17th - March 23rd
-- [ ] Quentin, Aurélien - Basic histogram, svg(?)
-- [ ] Mathieu, Rania - Basic sequence input : fasta, raw
+- [ ] Quentin, Aurélien - Histogramme basique (SVG ou canvas)
+- [ ] Mathieu, Rania - Entrée basique de séquences : fasta, raw
 
 ## March 24th - March 30th
 - [ ] Basic website
-- [ ] First prototype : fenetre, 2 matrices (identité, blossum 62), seuil, alignement(??).
+- [ ] Premier prototype : fenêtre, 2 matrices (identité, blosum 62), seuil, alignement.
 
 ## March 31st - April 6th
-- [ ] Alignement, picking, deplacement
-- [ ] Quentin, Rania - Add other matrix
-- [ ] Mathieu, Aurélien - Histogram, further WebGL dev
+- [ ] Alignement, picking, déplacement
+- [ ] Quentin, Rania - ajout autres matrices
+- [ ] Mathieu, Aurélien - Histogramme, WebGL avancé
 
 ## April 7th - April 13th
-- [ ] Analyse trial results
-- [ ] Algo ADN-ADN et test RGB texture(?)
+- [ ] Analyse résultats essai prototype
+- [ ] Algorithme ADN-ADN et test texture RVB
 
 ## April 14th - April 20th
 - [ ] Zoom molette
 - [ ] Amelioration du design
-- [ ] Algo PROT-ADN
+- [ ] Algorithme PROT-ADN
 
 ## April 21st - April 27th
-- [ ] Doc
+- [ ] Documentation
 
 ## April 28th - May 4th
 
@@ -42,14 +42,14 @@
 - [ ] Code finalisé
 
 ## May 5th - May 11th
-- [ ] Documentation finalisée
-- [ ] Debug
+- [ ] finalisation documentation
+- [ ] Debogage
 
 ## May 11th
-- [ ] Report
+- [ ] Rendu rapport
 
 ## May 12th - May 16th
-- [ ] Prepare presentation
+- [ ] Préparer présentation
 
 ## May 15th - 16th?
-- [ ] Presentation
+- [ ] Présentation
